@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: runners-frontend
+  labels:
+    app: runners-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: runners-frontend
+  template:
+    metadata:
+      labels:
+        app: runners-frontend
+    spec:
+      containers:
+        - name: runners-frontend
+          image: soojin434/runners-hi-frontend:latest
+          ports:
+            - containerPort: 80
