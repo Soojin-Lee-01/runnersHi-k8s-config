@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: runners-frontend
-          image: soojin434/runners-hi-frontend:latest
+          image: soojin434/runners-hi:latest
           ports:
             - containerPort: 80
